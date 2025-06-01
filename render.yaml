@@ -5,13 +5,15 @@ services:
     plan: free
     dockerfilePath: ./Dockerfile
     envVars:
-      - key: APP_ENV
-        value: production
-      - key: APP_KEY
-        value: base64:aCugHaSOnsFDB8SAWwlVoN0i4oL7voZGBe/KHV0pEG0=
-      - key: APP_DEBUG
-        value: false
-      - key: DB_CONNECTION
-        value: sqlite
-      - key: DB_DATABASE
-        value: /var/www/database/database.sqlite
+    - key: APP_KEY
+      value: base64:aCugHaSOnsFDB8SAWwlVoN0i4oL7voZGBe/KHV0pEG0=
+    - key: APP_ENV
+      value: production
+    - key: APP_DEBUG
+      value: false
+    - key: DB_CONNECTION
+      value: sqlite
+    - key: DB_DATABASE
+      value: /var/www/database/database.sqlite
+
+
