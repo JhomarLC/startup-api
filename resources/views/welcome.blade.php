@@ -41,6 +41,8 @@
             background: #f3f4f6;
             padding: 0.2rem 0.4rem;
             border-radius: 4px;
+            display: block;
+            margin-top: 0.5rem;
         }
         footer {
             margin-top: 2rem;
@@ -58,29 +60,32 @@
         <h2>Available API Endpoints:</h2>
         <ul>
             <li>
-                <strong>List All Startup Names:</strong><br>
+                <strong>All Startup Names:</strong><br>
                 <a href="{{ url('/api/startup-names') }}">{{ url('/api/startup-names') }}</a>
             </li>
-            <li class="mt-2">
-                <strong>Filter Startup Names by Category:</strong><br>
+            <li>
+                <strong>Filtered Startup Names (category=Fintech):</strong><br>
                 <a href="{{ url('/api/startup-names?category=Fintech') }}">{{ url('/api/startup-names?category=Fintech') }}</a>
+            </li>
+            <li>
+                <strong>Sample Business Ideas:</strong><br>
+                <a href="{{ url('/api/business-ideas') }}">{{ url('/api/business-ideas') }}</a>
+            </li>
+            <li>
+                <strong>User Submissions:</strong><br>
+                <a href="{{ url('/api/submissions') }}">{{ url('/api/submissions') }}</a>
             </li>
         </ul>
 
-        <h2 class="mt-6">Sample Response:</h2>
-        <pre><code>{
-    "startups": [
+        <h2>Sample Startup Response:</h2>
+        <code>{
+    "startup_names": [
         {
             "name": "FinPilot",
             "category": "Fintech"
         }
     ]
-}</code></pre>
-
-        <p class="mt-6">
-            You can fork this on GitHub or deploy it via Render/Heroku as a lightweight backend service for MVPs or hackathons.
-        </p>
-
+}</code>
         <footer>
             Laravel v{{ Illuminate\Foundation\Application::VERSION }} (PHP v{{ PHP_VERSION }})
         </footer>
